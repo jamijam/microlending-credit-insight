@@ -119,4 +119,4 @@ Now the development server is up and running with correct configurations. To ope
     * Enter same phone number you entered in the previous step into the `Input Phone Number` field and Submit.
     * Copy the correct OTP for the request and provide it in Use case frontend and `Submit`.
 
-    iii. If Credit Score is healthy, `You are eligible for a loan!` message will appear in the screen.
+    iii. Credit Score percentage will be shown. If Credit Score is healthy, `You are eligible for a loan!` message will appear in the screen. If not, `Unfortunately, you are not eligible for a loan.` message will appear in the screen.
