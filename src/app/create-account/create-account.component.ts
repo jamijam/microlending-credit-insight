@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { ToasterService } from 'angular2-toaster';
+
 import { SmartBankService } from '../_services/smart-bank/smart-bank.service';
 import { ApixService } from '../_services/apix/apix.service';
 
@@ -27,12 +29,16 @@ export class CreateAccountComponent implements OnInit {
   constructor(
     private smartBankService: SmartBankService,
     private apixService: ApixService,
-    private router: Router
+    private router: Router,
+    private toasterService: ToasterService
   ) { }
 
   ngOnInit() {
     this.apixService.getAPIXToken().subscribe(data => {
       this.APIXToken = data.access_token;
+      if (this.APIXToken.includes('Invalid')) {
+        this.toasterService.pop('error', 'Invalid Credentials', 'Please check if you have set valid APIX credentials in your API config.');
+      }
     });
   }
 
@@ -87,8 +93,8 @@ export class CreateAccountComponent implements OnInit {
             document.getElementById('closeBtn').click();
 
             this.router.navigate(['/viewdetails']);
-          });
-        });
+          }, error => this.throwSmartBankError(error));
+        }, error => this.throwSmartBankError(error));
 
         console.log(accountData);
       } else {
@@ -102,6 +108,15 @@ export class CreateAccountComponent implements OnInit {
       return false;
     }
     return true;
+  }
+
+  throwSmartBankError(error: any): void {
+    this.toasterService.pop(
+      'error',
+      'Error: SmartBank',
+      'Your request was rejected by the SmartBank API. Please check the console for extra information.'
+    );
+    console.error(error);
   }
 
 }
