@@ -1,8 +1,8 @@
 {
     "apix": {
         "credentials": {
-            "userName": "ddezoysa@virtusa.com",
-            "password": "Dinuth@123"
+            "userName": "Replace this with your APIX username",
+            "password": "Replace this with your APIX password"
         },
         "tokenUrl": "https://services.apixplatform.com/api-sandbox/application/token"
     },
