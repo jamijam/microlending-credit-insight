@@ -45,7 +45,7 @@ Execute following commands in Terminal window.
 
 To configure the use case,
 
-1. Open `account-openning` > `api-config.json` from the `Project Explorer` left pane.
+1. Open `microlending-credit-insight` > `api-config.json` from the `Project Explorer` left pane.
 2. Replace the `api-config.json` content with the given configurations shared during the workshop.
 3. Provide your APIX credentials.
 
