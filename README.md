@@ -17,17 +17,31 @@ Evaluating the creditworthiness of the borrowers would reduce the risk of the lo
         * host: https://staging-api.trustingsocial.com
         * basePath: /
 
-## Running the use case
+## Setting up the development server
 
 **Note:** If previous use case is running in the IDE Terminal, Press `Ctrl` + `C` to stop. 
 
 Execute following commands in Terminal window.
 
-1.  `cd ~/project/`
-2.  `git clone https://github.com/apixplatform/microlending-credit-insight.git`
-3.  `cd microlending-credit-insight/`
-4.  `npm install`
-5.  `npm start`
+1.  Let's change the terminal directory to root `projects` folder
+
+        cd ~/project/
+
+2.  Download the code into IDE instance
+
+        git clone https://github.com/apixplatform/microlending-credit-insight.git
+
+3.  Use case code is downloaded to IDE instance to the folder `microlending-credit-insight`. Let's change the terminal directory to `microlending-credit-insight` folder.
+
+        cd microlending-credit-insight/
+
+4.  Download Angular dependancies with below commands.
+
+        npm install
+
+5.  Start the Angular application server.
+
+        npm start
 
 To configure the use case,
 
@@ -49,7 +63,7 @@ Now the development server is up and running with correct configurations. To ope
 
 1. Click on `Create an Account` button from `Home` page.
 
-    i. In the GitHub project go to `test-images` and download `id.jpg` and `selfie.jpg`. Provide these two images in the 1st step and click `Verify` button. 
+    i. In the GitHub project go to `test-images` and download `id.jpg` and `selfie.jpg`. Provide these two images in the 1st step of application window and click `Verify` button. 
 
     * HyperVerge Face Match API will get executed to validate the provided identity document and selfie. 
     * Match confidence level will be provided as the output. 
