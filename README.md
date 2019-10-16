@@ -1,27 +1,72 @@
-# MicrolendingCreditInsight
+# Micro-Lending Credit Insight Use Case
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+This use case is an extension of [Account Opening Use Case](https://github.com/apixplatform/account-opening)
+demonstrates the account openning process with ID verification.
 
-## Development server
+## APIs used to implement the use case
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. HyperVerge Face Match ([Link](https://apixplatform.com/profile/api-detail?api-id=30))
 
-## Code scaffolding
+    * Additional API Keys are required to access HyperVerge Face Match API.
+        * appId: 2d9288
+        * appKey: 506505f70970ce16988f
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Smart Bank - Party ([Link](https://apixplatform.com/profile/api-detail?api-id=107))
+3. Smart Bank - Account ([Link](https://apixplatform.com/profile/api-detail?api-id=103))
 
-## Build
+Login to [APIX Platform](https://apixplatform.com) and subscribe to above APIs before continue to next step.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Provision APIX IDE Instance
 
-## Running unit tests
+1. Login to [APIX Platform](https://apixplatform.com)
+2. From the main menu, go to Sandbox > [Secure Experimentation Sandbox/IDE](https://apixplatform.com/ide/api-ide)
+3. Click `Create IDE Instance` button
+4. Provide `Name`, `URL`, `Description`, `Password` for the IDE instance and click `Create` button. 
+Please note that `URL` should be unique and `Password` must be atleast 8 characters long, must contain a number, uppercase, lowercase and a special character.
+5. Provide the confirmation by clicking on `Create and Launch` button. Wait for the IDE instance to be provissioned.
+6. Newly created IDE instance will be openned in a new browser tab. Provide the `Password` and click on `Open IDE` button.
+7. Already created IDE instances will appear in `IDE Instance Manager` view. Click on the IDE instance name to re-open the IDE instance
+8. Please note that IDE instance will be available for 24 hours. Data should be backed up by pushing code to GitHub before auto termination. One hour before the termination, you can request for an termination extension.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running the use case
 
-## Running end-to-end tests
+1. Open and login to IDE instance
+2. From the main menu, click `View` > `Terminal`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Execute following commands in Terminal window.
 
-## Further help
+1.  `git clone https://github.com/apixplatform/account-opening.git`
+2.  `cd account-opening/`
+3.  `npm install`
+4.  `npm start`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To configure the use case,
+
+1. Open `account-openning` > `api-config.json` from the `Project Explorer` left pane.
+2. Provide your APIX credentials.
+
+        "userName": "Replace this with your APIX username",
+        "password": "Replace this with your APIX password"
+
+3. From the main menu, click `File` > `Save`.
+
+Now the development server is up and running with correct configurations. To open the use case website follow the below instructions.
+
+1. Copy the IDE instance URL from the browser tab. (ex: `https://ide-xxxxxx.services.apixplatform.com/`)
+2. Open a new browser tab and paste the copied IDE url. Change the `ide` text to `app` in the URL and open. New URL would look like (ex: `https://app-xxxxxx.services.apixplatform.com/`)
+
+## Testing the use case
+
+1. In the GitHub project go to `test-images` and download `id.jpg` and `selfie.jpg`. Provide these two images in the 1st step and click `Verify` button. 
+
+    * HyperVerge Face Match API will get executed to validate the provided identity document and selfie. 
+    * Match confidence level will be provided as the output. 
+    * Click on `Go to Account Creation` button to proceed. 
+
+2. Provide account creation inputs and click `Create Account` Button.
+
+    * Bank customer will get created with the provided `Account Holder's Name` using `Smart Bank - Party` API.
+    * New Account gets created using `Smart Bank - Account` API.
+    * Newly created customer will be assigned to the Account as the Account Owner using `Smart Bank - Account` API.
+
+3. Created Account Details will be shown in the Step 3.
