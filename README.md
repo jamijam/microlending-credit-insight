@@ -90,12 +90,12 @@ Now the development server is up and running with correct configurations. To ope
 
 2. Click on `Apply for a Loan` button from `Home` Page
 
-    i. Enter the name and phone number (917025976692) and `Submit`.
+    i. Enter the name and phone number (`917025976692`) and `Submit`.
 
     ii. OTP needs to be provided now. 
     
     * Go to [Trusting Social Staging SMS Service](https://staging-api.trustingsocial.com/smsc_chat)
-    * Enter 917025976692 in the `Input Phone Number` field and Submit.
+    * Enter `917025976692` in the `Input Phone Number` field and Submit.
     * Copy the correct OTP message for the request and provide it in Use case frontend and `Submit`.
 
     iii. If Credit Score is healthy, `You are eligible for a loan!` message will appear in the screen.
