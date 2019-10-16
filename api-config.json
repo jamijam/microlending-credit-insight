@@ -16,10 +16,10 @@
     },
     "scoreApi": {
         "credentials": {
-            "user_name": "Please replace this with your trustingSocial username.",
-            "password": "Please replace this with your trustingSocial password."
+            "user_name": "apix_user",
+            "password": "apixuser@123"
         },
-        "clientCode": "Please replace this with your trustingSocial clientCode.",
+        "clientCode": "apix_client",
         "url": {
             "base": "https://staging-api.trustingsocial.com",
             "loginEndpoint": "https://staging-api.trustingsocial.com/authentication/users/login",
@@ -30,9 +30,9 @@
     },
     "encDecUtil" : {
         "url": {
-            "base": "localhost:8080",
-            "encryptEndpoint": "http://localhost:8080/encrypt",
-            "decryptEndpoint": "http://localhost:8080/decrypt"
+            "base": "app-microlending-backend.services.apixplatform.com",
+            "encryptEndpoint": "https://app-microlending-backend.services.apixplatform.com/encrypt",
+            "decryptEndpoint": "https://app-microlending-backend.services.apixplatform.com/decrypt"
         }
     },
     "smartbank": {
