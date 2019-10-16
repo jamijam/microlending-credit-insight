@@ -74,13 +74,12 @@ Execute following commands in Terminal window.
 To configure the use case,
 
 1. Open `microlending-credit-insight` > `api-config.json` from the `Project Explorer` left pane.
-2. **Replace the `api-config.json` content with the given configurations shared during the workshop.**
-3. Provide your APIX credentials.
+2. Provide your APIX credentials.
 
         "userName": "Replace this with your APIX username",
         "password": "Replace this with your APIX password"
 
-4. From the main menu, click `File` > `Save`.
+3. From the main menu, click `File` > `Save`.
 
 Now the development server is up and running with correct configurations. To open the use case website follow the below instructions.
 
@@ -109,12 +108,15 @@ Now the development server is up and running with correct configurations. To ope
 
 2. Click on `Apply for a Loan` button from `Home` Page
 
-    i. Enter the name and phone number (`917025976692`) and `Submit`.
+    i. Enter the name and phone number (`917025xxxxxx`) and `Submit`. Last 6 digits are arbitary. Please note down the phone number provided, before submit. 
+    
+    * 917025976692 - Has a good credit score
+    * 917025111111 - Has a bad credit score
 
     ii. OTP needs to be provided now. 
     
     * Go to [Trusting Social Staging SMS Service](https://staging-api.trustingsocial.com/smsc_chat)
-    * Enter `917025976692` in the `Input Phone Number` field and Submit.
+    * Enter same phone number you entered in the previous step into the `Input Phone Number` field and Submit.
     * Copy the correct OTP for the request and provide it in Use case frontend and `Submit`.
 
     iii. If Credit Score is healthy, `You are eligible for a loan!` message will appear in the screen.
