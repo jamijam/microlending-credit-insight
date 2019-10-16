@@ -1,8 +1,8 @@
 {
     "apix": {
         "credentials": {
-            "userName": "Please replace this with your APIX username.",
-            "password": "Please replace this with your APIX password."
+            "userName": "ddezoysa@virtusa.com",
+            "password": "Dinuth@123"
         },
         "tokenUrl": "https://services.apixplatform.com/api-sandbox/application/token"
     },
@@ -30,9 +30,9 @@
     },
     "encDecUtil" : {
         "url": {
-            "base": "https://ide-microlending-backend.services.apixplatform.com",
-            "encryptEndpoint": "https://ide-microlending-backend.services.apixplatform.com/encrypt",
-            "decryptEndpoint": "https://ide-microlending-backend.services.apixplatform.com/decrypt"
+            "base": "https://app-microlending-backend.services.apixplatform.com",
+            "encryptEndpoint": "https://app-microlending-backend.services.apixplatform.com/encrypt",
+            "decryptEndpoint": "https://app-microlending-backend.services.apixplatform.com/decrypt"
         }
     },
     "smartbank": {
