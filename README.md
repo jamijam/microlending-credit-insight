@@ -2,6 +2,8 @@
 
 This use case is an extension of [Account Opening Use Case](https://github.com/apixplatform/account-opening)
 
+This use case is built with Angular 8. To go through the use case, you don't need to know Angular. But if you are interested in leaning Angular, please follow [this](https://www.bitovi.com/academy/learn-angular.html) tutorial.
+
 Microlending involves granting small loans to people in need. These loans are generally used by entrepreneurs with a business idea or those who need extra cash to expand. In that sense, they aren't much different from small business loans. However, microlending is actually much different. What makes these loans unique are the motivations behind it, the sizes of loans, and the people involved.
 
 Evaluating the creditworthiness of the borrowers would reduce the risk of the loan not getting repaid. This use case would evaluate the credit score of the borrower.
