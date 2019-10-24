@@ -13,9 +13,9 @@ Evaluating the creditworthiness of the borrowers would reduce the risk of the lo
 1. Trusting Social - Credit Insight ([Link](https://apixplatform.com/profile/api-detail?api-id=259))
 
     * Staging API access Keys
-        * username: apix_user
-        * password: apixuser@123
-        * clientCode: apix_client
+        * username: *[Contact Trusting Social to get the credentials]*
+        * password: *[Contact Trusting Social to get the credentials]*
+        * clientCode: *[Contact Trusting Social to get the credentials]*
         * host: https://staging-api.trustingsocial.com
         * basePath: /
 

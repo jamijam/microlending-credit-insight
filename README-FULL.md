@@ -13,8 +13,8 @@ Evaluating the creditworthiness of the borrowers would reduce the risk of the lo
 1. HyperVerge Face Match ([Link](https://apixplatform.com/profile/api-detail?api-id=30))
 
     * Additional API Keys are required to access HyperVerge Face Match API.
-        * appId: 2d9288
-        * appKey: 506505f70970ce16988f
+        * appId: *[Contact Hyperverge to get the credentials]*
+        * appKey: *[Contact Hyperverge to get the credentials]*
 
 2. Smart Bank - Party ([Link](https://apixplatform.com/profile/api-detail?api-id=107))
 3. Smart Bank - Account ([Link](https://apixplatform.com/profile/api-detail?api-id=103))
